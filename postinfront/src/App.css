@@ -1,0 +1,57 @@
+/*toute la page*/
+.App {
+  text-align: center;
+  background: lemonchiffon;
+}
+.button {
+  display: none;
+}
+
+.element:hover button {
+  display: block; /* On :hover of div show button */
+}
+
+.element {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+
+  padding: auto;
+  margin: 10%;
+  box-shadow: black;
+  border-radius: 2cm;
+}
+/*Post-IN*/
+.element .card {
+  background-color: #13e953;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: green;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+h3 {
+  color: black;
+  text-shadow: 2px 2px 5px grey;
+}
+h2 {
+  text-shadow: 2px 2px 5px green;
+}
