@@ -13,10 +13,10 @@ const Member = ({ member_id }) => {
   }, []);
 
   return (
-    <>
+    <div>
       <h3>{listmembers.firstname}</h3>
       <h3>{listmembers.datepost}</h3>
-    </>
+    </div>
   );
 };
 export default Member;

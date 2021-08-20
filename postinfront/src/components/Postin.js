@@ -30,18 +30,23 @@ export default function Postin() {
     <>
       <h2>Family-postins</h2>
       <div className="container">
-        {postins.map((postin) => (
+        {postins.map((postin, key) => (
           <>
-            <div className="element">
-              <div className="card">
-                <h5 className="card-title">{postin.title}</h5>
+            <div className="element" key={postin.id}>
+              <div className="card" key={postin.id}>
+                <h5 className="card-title" key={postin.id}>
+                  {postin.title}
+                </h5>
 
-                <p className="card-text">{postin.text}</p>
+                <p className="card-text" key={postin.id + "p"}>
+                  {postin.text}
+                </p>
 
-                <h5 className="card-title">
+                <h5 className="card-title" key={postin.id + "h5"}>
                   <Member member_id={postin.id} />
                 </h5>
                 <button
+                  key={postin.id + "bu"}
                   className="button"
                   onClick={() => deletePost(postin.id)}
                 >

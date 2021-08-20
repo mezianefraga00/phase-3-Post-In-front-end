@@ -12,25 +12,18 @@ const New_postin = () => {
     const date = Date().toLocaleString();
     const member = { firstname, date };
 
-    const addpostin = () => {
-      fetch("http://localhost:9393/postins", {
-        method: `POST`,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
-      }).then((response) => response.json());
-    };
-    const addmember = () => {
-      fetch("http://localhost:9393/members", {
-        method: `POST`,
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(member),
-      }).then((res) => res.json());
-    };
-    addmember();
-    addpostin();
+    fetch("http://localhost:9393/postins", {
+      method: `POST`,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    }).then((response) => response.json());
+
+    fetch("http://localhost:9393/members", {
+      method: `POST`,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(member),
+    }).then((res) => res.json());
+
     window.location.reload();
 
     // PESSIMISTIC RENDERING
