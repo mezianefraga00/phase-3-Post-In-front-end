@@ -1,5 +1,5 @@
 development:
   adapter: sqlite3
-  database: db/test.sqlite3
+  database: db/developement.db
   pool: 5
   timeout: 5000
